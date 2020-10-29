@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
         ],
 
       ),
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Colors.white,
       
     );
   }
@@ -59,7 +59,7 @@ class Botao extends StatelessWidget {
         width: 120,
         height: 45,
         child: Center(
-          child: Text("Mudar Cor"),
+          child: Text("Mudar a Cor"),
         ),
         //alignment: Alignment.bottomCenter,
 
