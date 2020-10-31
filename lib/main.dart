@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'dart:math';
 
 void main() => runApp(MyApp());
 
@@ -8,12 +9,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mudar Fundo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(),
-    );
+        title: 'Mudar Fundo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              "Mudar Fundo",
+              style: TextStyle(color: Colors.black),
+            ),
+            backgroundColor: Colors.white,
+            centerTitle: true,
+          ),
+          body: HomePage(),
+        ));
   }
 }
 
@@ -25,19 +35,16 @@ class HomePage extends StatelessWidget {
         //color: Colors.lightBlue,
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-        Container(
-          height: 200,
-          child: Center(
-          child: Botao(),
+          Container(
+            height: 200,
+            child: Center(
+              child: Botao(),
+            ),
+            alignment: Alignment.bottomRight,
           ),
-          alignment: Alignment.bottomRight,
-        ),
-
         ],
-
       ),
       backgroundColor: Colors.white,
-      
     );
   }
 }
@@ -56,13 +63,17 @@ class Botao extends StatelessWidget {
           color: Theme.of(context).buttonColor,
           borderRadius: BorderRadius.circular(8.0),
         ),
-        width: 120,
-        height: 45,
+        width: 210,
+        height: 55,
         child: Center(
-          child: Text("Mudar a Cor"),
+          child: Text(
+            "Mudar a Cor",
+            style: TextStyle(
+              fontSize: 23,
+            ),
+          ),
         ),
         //alignment: Alignment.bottomCenter,
-
       ),
     );
   }
